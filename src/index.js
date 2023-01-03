@@ -6,7 +6,11 @@ const getProductUrl = (country, product_id) =>
   `https://www.amazon.${country}/gp/product/ajax/ref=dp_aod_NEW_mbc?asin=${product_id}&m=&smid=&sourcecustomerorglistid=&sourcecustomerorglistitemid=&sr=8-6&pc=dp&experienceId=aodAjaxMain`;
 
 async function getPrices(country, product_id) {
+  if (country !== 'ca') {
+    return console.log(new Error('SOMETHING WRONG'));
+  }
   const productUrl = getProductUrl(country, product_id);
+
   const { data: html } = await axios.get(productUrl, {
     headers: {
       Accept:
@@ -19,13 +23,16 @@ async function getPrices(country, product_id) {
       'Ugrade-Insecure-Requests': 1,
     },
   });
+
   const dom = new JSDOM(html);
   const $ = (selector) => dom.window.document.querySelector(selector);
   // console.log(
   //   dom.window.document.querySelector('.a-price .a-offscreen').textContent
   // );
   const title = $('#aod-asin-title-text').textContent.trim();
+
   const pinnedElement = $('#pinned-de-id');
+
   const pinnedPrice = pinnedElement.querySelector(
     '.a-price .a-offscreen'
   ).textContent;
@@ -58,4 +65,4 @@ async function getPrices(country, product_id) {
   console.log(result);
 }
 
-getPrices('ca', 'B01723DLYE');
+getPrices('tr', 'B01723DLYE');
