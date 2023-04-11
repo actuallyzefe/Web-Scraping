@@ -3,7 +3,7 @@
 getPrices([Amazon_Country_Code], [Amazon_Product_ID]);
 
 Ex:
-getPrices('com.tr', 'B08NGQDBWX'); // Country: Turkey, Product: Apple 2020 MacBook Air Laptop M1
+getPrices('tr', 'B08NGQDBWX'); // Country: Turkey, Product: Apple 2020 MacBook Air Laptop M1
 ```
 
 ## Amazon Country List
