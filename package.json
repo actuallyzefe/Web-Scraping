@@ -6,12 +6,19 @@
   },
   "name": "amazon-fetch",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node .",
+    "dev": "nodemon ."
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/actuallyzefe/Web-Scraping.git"
+  },
+  "keywords": [
+    "Scraping", "Amazon", "Product", "NodeJS", "JavaScript", "Web Scraping", "Web Scraping with NodeJS", "Web Scraping with JavaScript", "Web Scraping with NodeJS and JavaScript"
+  ],
+  "author": "actuallyzefe",
   "license": "MIT",
   "description": ""
 }
