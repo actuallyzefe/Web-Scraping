@@ -69,7 +69,7 @@ async function getPrices(country, product_id) {
 
 getPrices('com.tr', 'B0B4SBPDC8'); // Baseus Hızlı Şarj Adaptörü 65W
 
-getPrices('com.tr', 'B08NGQDBWX') // Apple 2020 MacBook Air Laptop M1
+getPrices('com.tr', 'B08NGQDBWX'); // Apple 2020 MacBook Air Laptop M1
 
 /* Amazon Country List - Source: https://en.wikipedia.org/wiki/Amazon_(company)
  *
