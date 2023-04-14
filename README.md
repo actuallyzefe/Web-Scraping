@@ -1,5 +1,5 @@
 # Web-Scraping
-
+.
 getPrices([Amazon_Country_Code], [Amazon_Product_ID]);
 
 Ex:
